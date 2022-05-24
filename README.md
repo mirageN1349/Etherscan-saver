@@ -1,6 +1,6 @@
 Startup instruction:
 
-1. Install postgress\*
+1. Install postgres\*
 
 2. Create a psql database. Use console command
    "psql --dbname=postgres",
