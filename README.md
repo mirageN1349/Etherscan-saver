@@ -1,10 +1,10 @@
 Startup instruction:
 
-1. Install postgress\*
+1. Install postgres\*
 
 2. Create a psql database. Use console command
    "psql --dbname=postgres",
-   then "CREATE DATABASE etherscan"
+   then "CREATE DATABASE etherscan;"
 
 3. Get free api key from https://etherscan.io/apis
 
@@ -20,7 +20,7 @@ Startup instruction:
 
 8. Send curl request "curl --location --request GET 'http://localhost:<YOUR_PORT>/api/numerical-address'"
 
-9. Congratulation!
+9. Congratulations!
 
 Resources:
 API Link: http://localhost:<YOUR_PORT>/api/docs/v/1.0.0/
