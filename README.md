@@ -20,7 +20,7 @@ Startup instruction:
 
 8. Send curl request "curl --location --request GET 'http://localhost:<YOUR_PORT>/api/numerical-address'"
 
-9. Congratulation!
+9. Congratulations!
 
 Resources:
 API Link: http://localhost:<YOUR_PORT>/api/docs/v/1.0.0/
