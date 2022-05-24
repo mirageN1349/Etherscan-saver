@@ -6,7 +6,7 @@ import { Block } from './Block';
 @Entity({ name: 'transactions' })
 export class Transaction extends AppEntity {
   @ApiProperty()
-  @Column({ type: 'bytea', nullable: false })
+  @Column({ type: 'character varying', nullable: false })
   blockNumber: string;
 
   @ApiProperty()

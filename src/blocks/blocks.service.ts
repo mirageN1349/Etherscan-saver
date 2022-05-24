@@ -1,5 +1,5 @@
 import { HttpService } from '@nestjs/axios';
-import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
+import { Injectable, Logger, OnApplicationBootstrap } from '@nestjs/common';
 import { Interval } from '@nestjs/schedule';
 import { Transaction } from '../entity/Transaction';
 import { map, Observable, catchError, switchMap } from 'rxjs';
@@ -19,6 +19,8 @@ export class BlocksService implements OnApplicationBootstrap {
   ) {
     this.startBlockNumber = +process.env.START_BLOCK_NUMBER || 9842805; // save transactions starting from this block
   }
+
+  logger = new Logger('BlocksLogger');
 
   onApplicationBootstrap() {
     this.getBlockById(this.startBlockNumber.toString(16))
@@ -89,6 +91,7 @@ export class BlocksService implements OnApplicationBootstrap {
         }),
       );
       await queryRunner.commitTransaction();
+      this.logger.log(`Transactions from ${block.number} were saved!`);
     } catch (error) {
       await queryRunner.rollbackTransaction();
     } finally {
