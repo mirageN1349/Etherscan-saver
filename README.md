@@ -4,7 +4,7 @@ Startup instruction:
 
 2. Create a psql database. Use console command
    "psql --dbname=postgres",
-   then "CREATE DATABASE etherscan"
+   then "CREATE DATABASE etherscan;"
 
 3. Get free api key from https://etherscan.io/apis
 
